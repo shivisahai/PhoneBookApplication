@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="372.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phonebookapplication.controller.NewRecordController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="372.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="TOP_CENTER" prefHeight="63.0" prefWidth="397.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="371.0" text="Enter Phone Book Record Information" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Separator prefHeight="3.0" prefWidth="323.0">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" />
+                    </VBox.margin>
+                </Separator>
+                <GridPane alignment="CENTER" prefHeight="187.0" prefWidth="367.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.3333740234375" minWidth="10.0" prefWidth="136.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="227.33331298828125" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="137.0" text="First Name:">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="137.0" text="Last Name:" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="137.0" text="Home Phone:" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="137.0" text="Work Phone:" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="47.0" prefWidth="137.0" text="Mobile Phone:" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="fname" prefHeight="25.0" prefWidth="87.0" promptText="Enter First Name" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="lname" promptText="Enter Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="hphone" promptText="Enter Home Phone" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="wphone" promptText="Enter Work Phone" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="mphone" promptText="Enter Mobile Phone" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets right="20.0" />
+                            </GridPane.margin>
+                        </TextField>
+                    </children>
+                </GridPane>
+                <Separator prefHeight="6.0" prefWidth="378.0">
+                    <VBox.margin>
+                        <Insets left="50.0" right="20.0" top="10.0" />
+                    </VBox.margin>
+                </Separator>
+                <HBox alignment="TOP_RIGHT" prefHeight="84.0" prefWidth="377.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#addNewRecord" prefHeight="30.0" prefWidth="70.0" text="OK">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#cancelButton" prefHeight="30.0" prefWidth="69.0" text="Cancel">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <padding>
+                <Insets right="40.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

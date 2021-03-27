@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="667.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phonebookapplication.controller.PhoneBookAppController">
+    <children>
+        <VBox layoutX="130.0" prefHeight="667.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <MenuBar fx:id="menubar">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#newPhoneBook" text="New Phone Book" />
+                                <MenuItem mnemonicParsing="false" onAction="#exitPhoneBookApp" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem fx:id="addMenu" mnemonicParsing="false" onAction="#handleNewPerson" text="Add" />
+                                <MenuItem mnemonicParsing="false" onAction="#updateRecord" text="Modify" />
+                                <MenuItem mnemonicParsing="false" onAction="#deleteRecord" text="Delete" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <TableView fx:id="tableView" prefHeight="593.0" prefWidth="786.0">
+                    <columns>
+                        <TableColumn fx:id="colLastname" minWidth="-Infinity" prefWidth="166.66666162014008" text="Last Name" />
+                        <TableColumn fx:id="colFirstName" prefWidth="158.6666717529297" text="First Name" />
+                        <TableColumn fx:id="colHomePhone" prefWidth="164.66665649414062" text="Home Phone" />
+                        <TableColumn fx:id="colWorkPhone" minWidth="0.0" prefWidth="173.33334350585938" text="Work Phone" />
+                        <TableColumn fx:id="colMobilePhone" minWidth="0.0" prefWidth="188.66668701171875" text="Mobile Phone" />
+                        <TableColumn fx:id="colID" editable="false" minWidth="0.0" prefWidth="220.00006103515625" sortable="false" text="ID" visible="false" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="49.0" prefWidth="851.0">
+                    <children>
+                        <Label fx:id="recordCount" prefHeight="41.0" prefWidth="855.0" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
